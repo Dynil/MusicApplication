@@ -111,8 +111,40 @@ public class BackendController {
 			return null;
 	}
 
+public void login(String email, String password) throws Exception{
+		
+		String url = "http://54.169.229.161/music/public/clientlogin";
+		String data = "email="+email+"&password="+password;
+		HttpClient httpClient = new DefaultHttpClient();
 
+	    try {
+	        HttpPost request = new HttpPost(url);
+	        StringEntity params =new StringEntity(data);
+	        request.addHeader("content-type", "application/x-www-form-urlencoded");
+	        request.setEntity(params);
+	        HttpResponse response = httpClient.execute(request);
+	        String stringJson = org.apache.http.util.EntityUtils.toString(response.getEntity());
+	       
+	        
+	        JSONObject jsonObj = new JSONObject(stringJson);
+	        if(jsonObj.getInt("login_status")==1){
+	        	
+	        	System.out.println("Your login is success");
+	        }
+	        else{
+	        	System.out.println("Your login is not success");
 
+	        }
+	        
+	    } catch (Exception ex) {
+	        // handle exception here
+	    } finally {
+	        httpClient.getConnectionManager().shutdown();
+	    }
+				
+
+}
+	
 	public String[][] listSong(String userid) throws Exception{
 		
 		String url = "http://54.169.229.161/music/public/musics/list";
@@ -148,12 +180,29 @@ public class BackendController {
 		}
 	}
 	
+	
+	public void renewSong(String userid, String songid, String duration, String string, String password ) throws Exception{
+		
+		String url = "http://54.169.229.161/music/public/musics/buy";
+		String data = "songid="+songid+"&duration="+duration+"&expire_date="+string+"&password="+password;
+		JSONObject jsonObj = this.requestJSONObject(url, data);
+		String success = jsonObj.getString("status");
+		if(success.equals("success")){
+			downloadSong(userid, songid, password);
+		}
+		else{
+			
+		}
+	}	
 	public void downloadSong(String userid, String songid, String password) throws Exception{
 		String url = "http://54.169.229.161/music/public/musics/download";
 		String data = "userid="+userid+"&songid="+songid+"&password="+password;
 
 		writeFile(this.requestString(url, data),songid+".txt");
 	}
+	
+	
+	
 	
 	public void writeFile(String text, String fileName){
 		try {

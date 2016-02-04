@@ -46,6 +46,8 @@ public class Main extends JFrame  {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
+		BackendController bc = new BackendController();
+		bc.login("nethphan@gmail.com", "123456");
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

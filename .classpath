@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/duchdynil/Documents/Workspaces/workspaceJava/MusicApplication/Library /commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="/Users/duchdynil/Documents/Workspaces/workspaceJava/MusicApplication/Library /commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/duchdynil/Documents/Workspaces/workspaceJava/MusicApplication/Library /fluent-hc-4.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/duchdynil/Documents/Workspaces/workspaceJava/MusicApplication/Library /httpclient-4.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/duchdynil/Documents/Workspaces/workspaceJava/MusicApplication/Library /httpclient-cache-4.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/duchdynil/Documents/Workspaces/workspaceJava/MusicApplication/Library /httpclient-win-4.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/duchdynil/Documents/Workspaces/workspaceJava/MusicApplication/Library /httpcore-4.4.3.jar"/>
+	<classpathentry kind="lib" path="/Users/duchdynil/Documents/Workspaces/workspaceJava/MusicApplication/Library /httpmime-4.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/duchdynil/Documents/Workspaces/workspaceJava/MusicApplication/Library /java-json.jar"/>
+	<classpathentry kind="lib" path="/Users/duchdynil/Documents/Workspaces/workspaceJava/MusicApplication/Library /jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/duchdynil/Documents/Workspaces/workspaceJava/MusicApplication/Library /jna-platform-4.1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
